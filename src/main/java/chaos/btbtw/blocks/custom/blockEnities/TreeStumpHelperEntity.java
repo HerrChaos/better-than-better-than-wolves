@@ -19,7 +19,10 @@ public class TreeStumpHelperEntity extends BlockEntity {
 
     public static void tick(World world, BlockPos pos, BlockState state, TreeStumpHelperEntity treeStumpHelperEntity) {
         if (world.getBlockState(pos.up()).getBlock().equals(Blocks.OAK_LOG)) {
+            System.out.println("Block up is: "+ world.getBlockState(pos.up()).getBlock());
+            System.out.println("Checking for: "+ Blocks.OAK_LOG);
             world.setBlockState(pos, ModBlocks.TREE_STUMP.getDefaultState());
+            return;
         }
         world.setBlockState(pos, Blocks.DIRT.getDefaultState());
     }
