@@ -20,9 +20,14 @@ public class TreeStump extends CraftingTableBlock {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        super.onUse(state, world, pos, player, hand, hit);
+        return super.onUse(state, world, pos, player, hand, hit);
+        /*
         if (this.Table == 3) {
             return super.onUse(state, world, pos, player, hand, hit);
         }
         return ActionResult.PASS;
+
+         */
     }
 }
