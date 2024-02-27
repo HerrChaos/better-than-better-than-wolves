@@ -1,6 +1,7 @@
 package chaos.btbtw.blocks.custom.blockEnities;
 
 import chaos.btbtw.blocks.ModBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
@@ -18,10 +19,25 @@ public class TreeStumpHelperEntity extends BlockEntity {
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, TreeStumpHelperEntity treeStumpHelperEntity) {
-        if (world.getBlockState(pos.up()).getBlock().equals(Blocks.OAK_LOG)) {
-            System.out.println("Block up is: "+ world.getBlockState(pos.up()).getBlock());
-            System.out.println("Checking for: "+ Blocks.OAK_LOG);
-            world.setBlockState(pos, ModBlocks.TREE_STUMP.getDefaultState());
+        Block ceckedBlock = world.getBlockState(pos.up()).getBlock();
+        if (ceckedBlock.equals(Blocks.OAK_LOG)) {
+            world.setBlockState(pos, ModBlocks.TREE_STUMP_OAK.getDefaultState());
+            return;
+        }
+        if (ceckedBlock.equals(Blocks.BIRCH_LOG)) {
+            world.setBlockState(pos, ModBlocks.TREE_STUMP_BIRCH.getDefaultState());
+            return;
+        }
+        if (ceckedBlock.equals(Blocks.SPRUCE_LOG)) {
+            world.setBlockState(pos, ModBlocks.TREE_STUMP_SPRUCE.getDefaultState());
+            return;
+        }
+        if (ceckedBlock.equals(Blocks.JUNGLE_LOG)) {
+            world.setBlockState(pos, ModBlocks.TREE_STUMP_JUNGLE.getDefaultState());
+            return;
+        }
+        if (ceckedBlock.equals(Blocks.DARK_OAK_LOG)) {
+            world.setBlockState(pos, ModBlocks.TREE_STUMP_DARK_OAK.getDefaultState());
             return;
         }
         world.setBlockState(pos, Blocks.DIRT.getDefaultState());

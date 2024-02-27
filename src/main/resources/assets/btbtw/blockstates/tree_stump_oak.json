@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "table=1" : {
+      "model": "btbtw:block/tree_stumps/oak/tree_stump_oak_1"
+    },
+    "table=2" : {
+      "model": "btbtw:block/tree_stumps/oak/tree_stump_oak_2"
+    },
+    "table=3" : {
+      "model": "btbtw:block/tree_stumps/oak/tree_stump_oak_3"
+    }
+  }
+}
