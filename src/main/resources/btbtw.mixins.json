@@ -3,7 +3,8 @@
 	"package": "chaos.btbtw.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-      "TreeStumpMixin"
+		"changes.TreeTrunkMixin",
+		"ImplementationHelper.TreeStumpMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

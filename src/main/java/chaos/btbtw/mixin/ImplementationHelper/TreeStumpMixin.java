@@ -1,4 +1,4 @@
-package chaos.btbtw.mixin;
+package chaos.btbtw.mixin.ImplementationHelper;
 
 import chaos.btbtw.blocks.ModBlocks;
 import com.sun.source.tree.Tree;
