@@ -3,7 +3,6 @@ package chaos.btbtw;
 import chaos.btbtw.blocks.ModBlocks;
 import chaos.btbtw.helper.changes.NoPlacingWhileJumpingMixin;
 import net.fabricmc.api.ModInitializer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
