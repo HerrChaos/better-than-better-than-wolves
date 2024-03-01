@@ -17,15 +17,14 @@ public class TreeTrunkMixin {
     @Inject(at = @At("TAIL"), method = "onBreak")
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player, CallbackInfoReturnable<BlockState> cir) {
         CompareList LogBlocks = new CompareList();
-        LogBlocks.add("oak_log", Blocks.OAK_LOG, 1);
-        LogBlocks.add("dark_oak_log", Blocks.DARK_OAK_LOG, 2);
-        LogBlocks.add("acacia_log", Blocks.ACACIA_LOG,3);
-        LogBlocks.add("birch_log", Blocks.BIRCH_LOG, 4);
-        LogBlocks.add("jungle_log", Blocks.JUNGLE_LOG, 5);
-        LogBlocks.add("spruce_log", Blocks.SPRUCE_LOG, 6);
-        System.out.println("broke log: " + state.getBlock().toString());
-        if (LogBlocks.checkFor(state.getBlock().toString()) != null) {
-            System.out.println("broke log: " + LogBlocks.checkFor(state.getBlock().toString()));
+        LogBlocks.add("block.minecraft.oak_log", Blocks.OAK_LOG, null);
+        LogBlocks.add("block.minecraft.dark_oak_log", Blocks.DARK_OAK_LOG, null);
+        LogBlocks.add("block.minecraft.acacia_log", Blocks.ACACIA_LOG,null);
+        LogBlocks.add("block.minecraft.birch_log", Blocks.BIRCH_LOG, null);
+        LogBlocks.add("block.minecraft.jungle_log", Blocks.JUNGLE_LOG, null);
+        LogBlocks.add("block.minecraft.spruce_log", Blocks.SPRUCE_LOG, null);
+        if (LogBlocks.checkFor(state.getBlock().getTranslationKey()) != null) {
+            System.out.println("broke loefsefgg: " + LogBlocks.checkFor(state.getBlock().getTranslationKey()));
         }
     }
 }
