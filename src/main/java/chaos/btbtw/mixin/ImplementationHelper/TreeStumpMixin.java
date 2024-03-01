@@ -17,9 +17,8 @@ import java.util.function.BiConsumer;
 
 @Mixin(TreeFeature.class)
 public abstract class TreeStumpMixin {
-	@Inject(at = @At("HEAD"), method = "generate(Lnet/minecraft/world/StructureWorldAccess;Lnet/minecraft/util/math/random/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/function/BiConsumer;Ljava/util/function/BiConsumer;Lnet/minecraft/world/gen/foliage/FoliagePlacer$BlockPlacer;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)Z")
+	@Inject(at = @At("RETURN"), method = "generate(Lnet/minecraft/world/StructureWorldAccess;Lnet/minecraft/util/math/random/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/function/BiConsumer;Ljava/util/function/BiConsumer;Lnet/minecraft/world/gen/foliage/FoliagePlacer$BlockPlacer;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)Z")
 	public void generate(StructureWorldAccess world, Random random, BlockPos pos, BiConsumer<BlockPos, BlockState> rootPlacerReplacer, BiConsumer<BlockPos, BlockState> trunkPlacerReplacer, FoliagePlacer.BlockPlacer blockPlacer, TreeFeatureConfig config, CallbackInfoReturnable<Boolean> cir) {
-		//rootPlacerReplacer.accept(pos, ModBlocks.TREE_STUMP_HELPER.getDefaultState());
-		blockPlacer.placeBlock(pos, ModBlocks.TREE_STUMP_HELPER.getDefaultState());
+		if (cir.getReturnValue()) blockPlacer.placeBlock(pos, ModBlocks.TREE_STUMP_HELPER.getDefaultState());
 	}
 }
