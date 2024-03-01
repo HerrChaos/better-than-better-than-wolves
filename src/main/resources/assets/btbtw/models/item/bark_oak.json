@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "btbtw:block/tree_stumps/oak/oak_log"
+  }
+}

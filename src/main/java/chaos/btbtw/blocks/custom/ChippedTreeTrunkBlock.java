@@ -2,7 +2,9 @@ package chaos.btbtw.blocks.custom;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -11,6 +13,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldEvents;
 import net.minecraft.world.event.GameEvent;
+import org.jetbrains.annotations.Nullable;
 
 public class ChippedTreeTrunkBlock extends Block {
     public static final int MaxChip = 4;
@@ -37,8 +40,8 @@ public class ChippedTreeTrunkBlock extends Block {
     }
 
     @Override
-    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+    public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
         this.breakOneStage(world, pos, state);
-        return super.onBreak(world, pos, state, player);
+        super.afterBreak(world, player, pos, state, blockEntity, tool);
     }
 }
