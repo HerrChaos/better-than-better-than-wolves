@@ -38,7 +38,7 @@ public class ChippedTreeTrunkBlock extends Block {
         if (i >= 4) {
             world.breakBlock(pos, true);
         } else {
-            ItemEntity itemEntity = null;
+            ItemEntity itemEntity;
             if (new Random().nextInt(3) == 2) {
                 itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), ModItems.SAWDUST.getDefaultStack());
             } else {
