@@ -1,12 +1,12 @@
 package chaos.btbtw.blocks.custom;
 
+import chaos.btbtw.items.custom.ChiselItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CraftingTableBlock;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -41,7 +41,7 @@ public class TreeStump extends CraftingTableBlock {
         return ActionResult.PASS;
     }
 
-    private void breakOneBottle(World world, BlockPos pos, BlockState state) {
+    private void breakOneStage(World world, BlockPos pos, BlockState state) {
         world.playSound(null, pos, SoundEvents.BLOCK_WOOD_BREAK, SoundCategory.BLOCKS, 0.7f, 0.9f + world.random.nextFloat() * 0.2f);
         int i = state.get(TABLE);
         if (i >= 3) {
@@ -55,13 +55,13 @@ public class TreeStump extends CraftingTableBlock {
     @Override
     public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
         super.afterBreak(world, player, pos, state, blockEntity, tool);
-        this.breakOneBottle(world, pos, state);
+        this.breakOneStage(world, pos, state);
     }
 
 
     @Override
     public float calcBlockBreakingDelta(BlockState state, PlayerEntity player, BlockView world, BlockPos pos) {
-        if (player.getInventory().getMainHandStack().getItem() == Items.STONE_AXE && state.get(TABLE) != 3) {
+        if (player.getInventory().getMainHandStack().getItem() instanceof ChiselItem && state.get(TABLE) != 3) {
             return super.calcBlockBreakingDelta(state,player,world,pos);
         }
         return 0;

@@ -2,6 +2,7 @@ package chaos.btbtw;
 
 import chaos.btbtw.blocks.ModBlocks;
 import chaos.btbtw.helper.changes.NoPlacingWhileJumpingMixin;
+import chaos.btbtw.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +14,7 @@ public class BetterThanBetterThanWolves implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModBlocks.registerModBlocks(MOD_ID);
+		ModItems.registerModItems(MOD_ID);
 		NoPlacingWhileJumpingMixin.init();
 		LOGGER.info("Hello Fabric world!");
 	}
