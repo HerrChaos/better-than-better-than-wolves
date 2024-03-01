@@ -13,13 +13,18 @@ import static chaos.btbtw.BetterThanBetterThanWolves.MOD_ID;
 
 public class ModItems {
     public static final Item IRON_CHISEL = new IronChiselItem(new FabricItemSettings().maxCount(1).maxDamage(20));
+    public static final Item DIAMOND_CHISEL = new IronChiselItem(new FabricItemSettings().maxCount(1).maxDamage(20));
+
     public static final Item BARK_OAK = new Item(new FabricItemSettings());
     public static final Item BARK_BIRCH = new Item(new FabricItemSettings());
     public static final Item BARK_SPRUCE = new Item(new FabricItemSettings());
     public static final Item BARK_JUNGLE = new Item(new FabricItemSettings());
     public static final Item BARK_ACACIA = new Item(new FabricItemSettings());
     public static final Item BARK_DARK_OAK = new Item(new FabricItemSettings());
+
     public static final Item SAWDUST = new Item(new FabricItemSettings());
+
+    public static final Item POINTY_STICK = new Item(new FabricItemSettings());
     private static void newItem(Item block, String name) {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), block);
     }
@@ -44,5 +49,7 @@ public class ModItems {
         newFuelItem(SAWDUST, "sawdust", 1);
 
         newItem(IRON_CHISEL, "iron_chisel");
+        newItem(DIAMOND_CHISEL, "diamond_chisel");
+        newItem(POINTY_STICK, "pointy_stick");
     }
 }
