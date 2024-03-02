@@ -2,11 +2,14 @@ package chaos.btbtw.items;
 
 import chaos.btbtw.BetterThanBetterThanWolves;
 import chaos.btbtw.blocks.ModBlocks;
-import chaos.btbtw.items.custom.IronChiselItem;
+import chaos.btbtw.items.custom.ChiselItem;
+import chaos.btbtw.items.custom.ToolMaterials.ChiselToolMaterial;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ToolItem;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -14,8 +17,8 @@ import net.minecraft.util.Identifier;
 import static chaos.btbtw.BetterThanBetterThanWolves.MOD_ID;
 
 public class ModItems {
-    public static final Item IRON_CHISEL = new IronChiselItem(new FabricItemSettings().maxCount(1).maxDamage(20));
-    public static final Item DIAMOND_CHISEL = new IronChiselItem(new FabricItemSettings().maxCount(1).maxDamage(20));
+    public static final Item IRON_CHISEL = new ChiselItem(ChiselToolMaterial.INSTANCE,3, 1, new FabricItemSettings().maxCount(1).maxDamage(20));
+    public static final Item DIAMOND_CHISEL = new ChiselItem(ChiselToolMaterial.INSTANCE, 5, 1, new FabricItemSettings().maxCount(1).maxDamage(40));
 
     public static final Item BARK_OAK = new Item(new FabricItemSettings());
     public static final Item BARK_BIRCH = new Item(new FabricItemSettings());
@@ -26,7 +29,7 @@ public class ModItems {
 
     public static final Item SAWDUST = new Item(new FabricItemSettings());
 
-    public static final Item POINTY_STICK = new Item(new FabricItemSettings());
+    public static final Item POINTY_STICK = new ToolItem(ToolMaterials.WOOD, new FabricItemSettings().maxCount(1).maxDamage(5));
     public static final Item LOOSE_STONE = new Item(new FabricItemSettings());
     public static final Item PILE_OF_DIRT = new Item(new FabricItemSettings());
     public static final Item DIRT_SLAB = new BlockItem(ModBlocks.DIRT_SLAB, new FabricItemSettings());

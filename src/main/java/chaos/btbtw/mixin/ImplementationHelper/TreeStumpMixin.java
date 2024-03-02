@@ -23,6 +23,7 @@ public abstract class TreeStumpMixin {
 		if (cir.getReturnValue()) {
 			blockPlacer.placeBlock(pos, ModBlocks.TREE_STUMP_HELPER.getDefaultState());
 			if (config.trunkPlacer instanceof GiantTrunkPlacer) {
+				System.out.println(config.trunkProvider.get(random, pos));
 				blockPlacer.placeBlock(pos.add(1,0,0), ModBlocks.TREE_STUMP_HELPER.getDefaultState());
 				blockPlacer.placeBlock(pos.add(1,0,1), ModBlocks.TREE_STUMP_HELPER.getDefaultState());
 				blockPlacer.placeBlock(pos.add(0,0,1), ModBlocks.TREE_STUMP_HELPER.getDefaultState());

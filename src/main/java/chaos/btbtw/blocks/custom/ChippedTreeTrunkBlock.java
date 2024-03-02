@@ -1,13 +1,10 @@
 package chaos.btbtw.blocks.custom;
 
-import chaos.btbtw.items.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -17,8 +14,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldEvents;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Random;
 
 public class ChippedTreeTrunkBlock extends Block {
     public static final int MaxChip = 4;
@@ -38,13 +33,6 @@ public class ChippedTreeTrunkBlock extends Block {
         if (i >= MaxChip) {
             world.breakBlock(pos, true);
         } else {
-            ItemEntity itemEntity;
-            if (new Random().nextInt(3) == 2) {
-                itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), ModItems.SAWDUST.getDefaultStack());
-            } else {
-                itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), Items.STICK.getDefaultStack());
-            }
-            world.spawnEntity(itemEntity);
             world.setBlockState(pos, state.with(CHIP, i + 1), Block.NOTIFY_LISTENERS);
             world.emitGameEvent(GameEvent.BLOCK_DESTROY, pos, GameEvent.Emitter.of(state));
             world.syncWorldEvent(WorldEvents.BLOCK_BROKEN, pos, Block.getRawIdFromState(state));
