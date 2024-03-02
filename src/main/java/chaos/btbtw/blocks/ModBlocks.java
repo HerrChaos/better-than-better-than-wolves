@@ -3,7 +3,6 @@ package chaos.btbtw.blocks;
 import chaos.btbtw.BetterThanBetterThanWolves;
 import chaos.btbtw.blocks.custom.ChippedTreeTrunkBlock;
 import chaos.btbtw.blocks.custom.TreeStump;
-import chaos.btbtw.blocks.custom.TreeStumpHelper;
 import chaos.btbtw.blocks.custom.blockEnities.ModBlockEntityTypes;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -22,7 +21,6 @@ public class ModBlocks {
     public static final Block TREE_STUMP_JUNGLE  = new TreeStump(FabricBlockSettings.create().burnable().dropsNothing().strength(5F, 200.0F));
     public static final Block TREE_STUMP_ACACIA  = new TreeStump(FabricBlockSettings.create().burnable().dropsNothing().strength(5F, 200.0F));
     public static final Block TREE_STUMP_DARK_OAK  = new TreeStump(FabricBlockSettings.create().burnable().dropsNothing().strength(5F, 200.0F));
-    public static final Block TREE_STUMP_HELPER  = new TreeStumpHelper(FabricBlockSettings.create());
 
     public static final Block CHIPPED_OAK_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
     public static final Block CHIPPED_BIRCH_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
@@ -42,7 +40,6 @@ public class ModBlocks {
         NewBlock(TREE_STUMP_JUNGLE, "tree_stump_jungle");
         NewBlock(TREE_STUMP_ACACIA, "tree_stump_acacia");
         NewBlock(TREE_STUMP_DARK_OAK, "tree_stump_dark_oak");
-        NewBlock(TREE_STUMP_HELPER, "tree_stump_helper");
     }
 
 
