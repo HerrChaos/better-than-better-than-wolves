@@ -1,9 +1,11 @@
 package chaos.btbtw.items;
 
 import chaos.btbtw.BetterThanBetterThanWolves;
+import chaos.btbtw.blocks.ModBlocks;
 import chaos.btbtw.items.custom.IronChiselItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -25,6 +27,9 @@ public class ModItems {
     public static final Item SAWDUST = new Item(new FabricItemSettings());
 
     public static final Item POINTY_STICK = new Item(new FabricItemSettings());
+    public static final Item LOOSE_STONE = new Item(new FabricItemSettings());
+    public static final Item PILE_OF_DIRT = new Item(new FabricItemSettings());
+    public static final Item DIRT_SLAB = new BlockItem(ModBlocks.DIRT_SLAB, new FabricItemSettings());
     private static void newItem(Item block, String name) {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), block);
     }
@@ -51,5 +56,8 @@ public class ModItems {
         newItem(IRON_CHISEL, "iron_chisel");
         newItem(DIAMOND_CHISEL, "diamond_chisel");
         newItem(POINTY_STICK, "pointy_stick");
+        newItem(LOOSE_STONE, "loose_stone");
+        newItem(PILE_OF_DIRT, "pile_of_dirt");
+        newItem(DIRT_SLAB, "dirt_slab");
     }
 }

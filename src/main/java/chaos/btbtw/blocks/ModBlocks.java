@@ -8,6 +8,7 @@ import chaos.btbtw.blocks.custom.blockEnities.ModBlockEntityTypes;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -29,6 +30,7 @@ public class ModBlocks {
     public static final Block CHIPPED_JUNGLE_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
     public static final Block CHIPPED_ACACIA_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
     public static final Block CHIPPED_DARK_OAK_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
+    public static final Block DIRT_SLAB = new SlabBlock(Blocks.DIRT.getSettings());
     private static void NewBlock(Block block, String name) {
         Registry.register(Registries.BLOCK, new Identifier(MOD_ID, name), block);
     }
@@ -56,6 +58,7 @@ public class ModBlocks {
         ModBlockEntityTypes.registerModBlockEntities(MOD_ID);
         registerTreeStumps();
         registerChippedTreeTrunks();
+        NewBlock(DIRT_SLAB, "dirt_slab");
 
         BetterThanBetterThanWolves.LOGGER.info("registering modBlocks for " + MOD_ID);
     }

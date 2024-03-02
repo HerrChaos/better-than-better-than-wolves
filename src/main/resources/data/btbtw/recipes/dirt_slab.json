@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "btbtw:pile_of_dirt"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "btbtw:dirt_slab"
+  },
+  "show_notification": false
+}

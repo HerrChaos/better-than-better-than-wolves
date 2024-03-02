@@ -35,7 +35,7 @@ public class ChippedTreeTrunkBlock extends Block {
     private void breakOneStage(World world, BlockPos pos, BlockState state) {
         world.playSound(null, pos, SoundEvents.BLOCK_WOOD_BREAK, SoundCategory.BLOCKS, 0.7f, 0.9f + world.random.nextFloat() * 0.2f);
         int i = state.get(CHIP);
-        if (i >= 4) {
+        if (i >= MaxChip) {
             world.breakBlock(pos, true);
         } else {
             ItemEntity itemEntity;
