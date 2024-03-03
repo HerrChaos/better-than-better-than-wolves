@@ -13,8 +13,8 @@ public class BetterThanBetterThanWolves implements ModInitializer {
 	public static final String MOD_ID = "btbtw";
 	@Override
 	public void onInitialize() {
-		ModBlocks.registerModBlocks(MOD_ID);
 		ModItems.registerModItems(MOD_ID);
+		ModBlocks.registerModBlocks(MOD_ID);
 		EventHandler.InitAll();
 		LOGGER.info("Hello Fabric world!");
 		//TODO Make stone block actually drop the loose stone with sharp stick

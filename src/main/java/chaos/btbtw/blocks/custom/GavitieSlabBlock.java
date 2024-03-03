@@ -20,11 +20,11 @@ import net.minecraft.world.WorldAccess;
 
 public class GavitieSlabBlock extends SlabBlock implements LandingBlock {
     public Item pile_item;
-    public GavitieSlabBlock(Settings settings, Item pile_items) {
-        super(settings);
-        pile_item = pile_items;
-    }
 
+    public GavitieSlabBlock(Settings settings, Item pile_item) {
+        super(settings);
+        this.pile_item = pile_item;
+    }
     @Override
     public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean notify) {
         world.scheduleBlockTick(pos, this, this.getFallDelay());
@@ -54,11 +54,13 @@ public class GavitieSlabBlock extends SlabBlock implements LandingBlock {
         if (FallingBlock.canFallThrough(world.getBlockState(pos.down())) || pos.getY() < world.getBottomY()) {
             FallingBlockEntity fallingBlockEntity = FallingBlockEntity.spawnFromBlock(world, pos, state);
             this.configureFallingBlockEntity(fallingBlockEntity);
+            return;
         }
         if (state.get(TYPE) == SlabType.TOP) {
             FallingBlockEntity fallingBlockEntity = FallingBlockEntity.spawnFromBlock(world, pos, state);
             this.configureFallingBlockEntity(fallingBlockEntity);
             fallingBlockEntity.setPosition(fallingBlockEntity.getPos().add(0, 0.5 ,0));
+            return;
         }
         if (world.getBlockState(pos.down()).getBlock() instanceof SlabBlock && world.getBlockState(pos.down()).get(TYPE) == SlabType.BOTTOM) {
             FallingBlockEntity fallingBlockEntity = FallingBlockEntity.spawnFromBlock(world, pos, state);

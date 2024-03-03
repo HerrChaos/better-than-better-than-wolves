@@ -31,13 +31,14 @@ public abstract class TreeStumpMixin {
 			LogBlocks.add("block.minecraft.spruce_log", ModBlocks.TREE_STUMP_SPRUCE, null);
 			LogBlocks.add("block.minecraft.acacia_log", ModBlocks.TREE_STUMP_ACACIA, null);
 			LogBlocks.add("block.minecraft.dark_oak_log", ModBlocks.TREE_STUMP_DARK_OAK, null);
-
-			blockPlacer.placeBlock(pos, ((Block) LogBlocks.checkFor(config.trunkProvider.get(random, pos).getBlock().getTranslationKey())).getDefaultState());
-			if ((config.trunkPlacer instanceof GiantTrunkPlacer) || (config.trunkPlacer instanceof DarkOakTrunkPlacer)) {
-				blockPlacer.placeBlock(pos.add(1,0,0), ((Block) LogBlocks.checkFor(config.trunkProvider.get(random, pos).getBlock().getTranslationKey())).getDefaultState());
-				blockPlacer.placeBlock(pos.add(1,0,1), ((Block) LogBlocks.checkFor(config.trunkProvider.get(random, pos).getBlock().getTranslationKey())).getDefaultState());
-				blockPlacer.placeBlock(pos.add(0,0,1), ((Block) LogBlocks.checkFor(config.trunkProvider.get(random, pos).getBlock().getTranslationKey())).getDefaultState());
-			}
+			//if (config.trunkProvider.get(random, pos.up()).getBlock() == config.trunkProvider.get(random, pos).getBlock()) {
+				blockPlacer.placeBlock(pos, ((Block) LogBlocks.checkFor(config.trunkProvider.get(random, pos).getBlock().getTranslationKey())).getDefaultState());
+				if ((config.trunkPlacer instanceof GiantTrunkPlacer) || (config.trunkPlacer instanceof DarkOakTrunkPlacer)) {
+					blockPlacer.placeBlock(pos.add(1, 0, 0), ((Block) LogBlocks.checkFor(config.trunkProvider.get(random, pos).getBlock().getTranslationKey())).getDefaultState());
+					blockPlacer.placeBlock(pos.add(1, 0, 1), ((Block) LogBlocks.checkFor(config.trunkProvider.get(random, pos).getBlock().getTranslationKey())).getDefaultState());
+					blockPlacer.placeBlock(pos.add(0, 0, 1), ((Block) LogBlocks.checkFor(config.trunkProvider.get(random, pos).getBlock().getTranslationKey())).getDefaultState());
+				}
+			//}
 		}
 	}
 }

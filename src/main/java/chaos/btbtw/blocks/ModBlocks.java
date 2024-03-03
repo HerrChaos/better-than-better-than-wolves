@@ -32,9 +32,9 @@ public class ModBlocks {
     public static final Block CHIPPED_DARK_OAK_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
 
     //TODO Make custom gravity effected slabs
-    public static final Block DIRT_SLAB = new GavitieSlabBlock(Blocks.DIRT.getSettings(), ModItems.PILE_OF_DIRT);
-    public static final Block GRAVEL_SLAB = new GavitieSlabBlock(Blocks.GRAVEL.getSettings(), ModItems.PILE_OF_GRAVEL);
-    public static final Block SAND_SLAB = new GavitieSlabBlock(Blocks.SAND.getSettings(), ModItems.PILE_OF_SAND);
+    public static final Block DIRT_SLAB = new GavitieSlabBlock(FabricBlockSettings.copyOf(Blocks.DIRT.getSettings()), ModItems.PILE_OF_DIRT);
+    public static final Block GRAVEL_SLAB = new GavitieSlabBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL.getSettings()), ModItems.PILE_OF_GRAVEL);
+    public static final Block SAND_SLAB = new GavitieSlabBlock(FabricBlockSettings.copyOf(Blocks.SAND.getSettings()), ModItems.PILE_OF_SAND);
     private static void NewBlock(Block block, String name) {
         Registry.register(Registries.BLOCK, new Identifier(MOD_ID, name), block);
     }
