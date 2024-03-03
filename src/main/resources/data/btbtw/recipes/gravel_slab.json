@@ -3,14 +3,15 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "btbtw:shaft"
+      "item": "btbtw:pile_of_gravel"
     }
   },
   "pattern": [
-    "#"
+    "##",
+    "##"
   ],
   "result": {
-    "item": "btbtw:pointy_stick"
+    "item": "btbtw:gravel_slab"
   },
   "show_notification": false
 }

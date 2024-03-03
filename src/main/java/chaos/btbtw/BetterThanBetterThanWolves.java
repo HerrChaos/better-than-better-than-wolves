@@ -17,5 +17,6 @@ public class BetterThanBetterThanWolves implements ModInitializer {
 		ModItems.registerModItems(MOD_ID);
 		EventHandler.InitAll();
 		LOGGER.info("Hello Fabric world!");
+		//TODO Make stone block actually drop the loose stone with sharp stick
 	}
 }

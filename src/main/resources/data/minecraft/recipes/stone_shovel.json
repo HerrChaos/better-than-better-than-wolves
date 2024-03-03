@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:string"
+    },
+    "W": {
+      "item": "btbtw:shaft"
+    },
+    "X": {
+      "item": "btbtw:loose_stone"
+    }
+  },
+  "pattern": [
+    "X#",
+    " W"
+  ],
+  "result": {
+    "item": "minecraft:stone_shovel"
+  }
+}

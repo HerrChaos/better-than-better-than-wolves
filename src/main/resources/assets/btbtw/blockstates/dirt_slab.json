@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "btbtw:block/dirt_slab"
+      "model": "btbtw:block/slabs/nature/dirt_slab"
     },
     "type=double": {
       "model": "minecraft:block/dirt"
     },
     "type=top": {
-      "model": "minecraft:block/dirt_slab_top"
+      "model": "btbtw:block/slabs/nature/dirt_slab_top"
     }
   }
 }

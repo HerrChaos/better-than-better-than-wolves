@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "minecraft:dirt"
+              "name": "minecraft:sand"
             },
             {
               "type": "minecraft:item",
@@ -42,7 +42,7 @@
                   "condition": "minecraft:survives_explosion"
                 }
               ],
-              "name": "btbtw:pile_of_dirt"
+              "name": "btbtw:pile_of_sand"
             }
           ]
         }

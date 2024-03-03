@@ -3,6 +3,13 @@
   "item.btbtw.bark_oak": "Oak Bark",
   "item.btbtw.pointy_stick": "Pointy Stick",
   "item.btbtw.loose_stone": "Loose Stone",
+  "item.btbtw.sawdust": "Sawdust",
+
   "item.btbtw.pile_of_dirt": "Pile of Dirt",
-  "block.btbtw.dirt_slab": "Dirt Slab"
+  "item.btbtw.pile_of_gravel": "Pile of Gravel",
+  "item.btbtw.pile_of_sand": "Pile of Sand",
+
+  "block.btbtw.dirt_slab": "Dirt Slab",
+  "block.btbtw.gravel_slab": "Gravel Slab",
+  "block.btbtw.sand_slab": "Sand Slab"
 }

@@ -28,11 +28,19 @@ public class ModItems {
     public static final Item BARK_DARK_OAK = new Item(new FabricItemSettings());
 
     public static final Item SAWDUST = new Item(new FabricItemSettings());
+    public static final Item SHAFT = new Item(new FabricItemSettings());
 
     public static final Item POINTY_STICK = new ToolItem(ToolMaterials.WOOD, new FabricItemSettings().maxCount(1).maxDamage(5));
     public static final Item LOOSE_STONE = new Item(new FabricItemSettings());
+
+
     public static final Item PILE_OF_DIRT = new Item(new FabricItemSettings());
+    public static final Item PILE_OF_GRAVEL = new Item(new FabricItemSettings());
+    public static final Item PILE_OF_SAND = new Item(new FabricItemSettings());
+
     public static final Item DIRT_SLAB = new BlockItem(ModBlocks.DIRT_SLAB, new FabricItemSettings());
+    public static final Item GRAVEL_SLAB = new BlockItem(ModBlocks.GRAVEL_SLAB, new FabricItemSettings());
+    public static final Item SAND_SLAB = new BlockItem(ModBlocks.SAND_SLAB, new FabricItemSettings());
     private static void newItem(Item block, String name) {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), block);
     }
@@ -49,18 +57,30 @@ public class ModItems {
         newFuelItem(BARK_ACACIA, "bark_acacia", 2);
         newFuelItem(BARK_DARK_OAK, "bark_dark_oak", 2);
     }
+
+
+    private static void registerPileAndSlabsItems() {
+        newItem(PILE_OF_DIRT, "pile_of_dirt");
+        newItem(PILE_OF_GRAVEL, "pile_of_gravel");
+        newItem(PILE_OF_SAND, "pile_of_sand");
+
+
+        newItem(DIRT_SLAB, "dirt_slab");
+        newItem(GRAVEL_SLAB, "gravel_slab");
+        newItem(SAND_SLAB, "sand_slab");
+    }
     public static void registerModItems(String MOD_ID) {
         BetterThanBetterThanWolves.LOGGER.info("Registering mod Items for " + MOD_ID);
 
         registerBarkItems();
+        registerPileAndSlabsItems();
 
         newFuelItem(SAWDUST, "sawdust", 1);
+        newFuelItem(SHAFT, "shaft", 2);
 
         newItem(IRON_CHISEL, "iron_chisel");
         newItem(DIAMOND_CHISEL, "diamond_chisel");
         newItem(POINTY_STICK, "pointy_stick");
         newItem(LOOSE_STONE, "loose_stone");
-        newItem(PILE_OF_DIRT, "pile_of_dirt");
-        newItem(DIRT_SLAB, "dirt_slab");
     }
 }
