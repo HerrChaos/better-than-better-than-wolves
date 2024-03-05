@@ -24,14 +24,13 @@ public class ModBlocks {
     public static final Block TREE_STUMP_ACACIA  = new TreeStump(AbstractBlock.Settings.create().burnable().dropsNothing().strength(5F, 200.0F));
     public static final Block TREE_STUMP_DARK_OAK  = new TreeStump(AbstractBlock.Settings.create().burnable().dropsNothing().strength(5F, 200.0F));
 
-    public static final Block CHIPPED_OAK_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
-    public static final Block CHIPPED_BIRCH_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
-    public static final Block CHIPPED_SPRUCE_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
-    public static final Block CHIPPED_JUNGLE_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
-    public static final Block CHIPPED_ACACIA_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
-    public static final Block CHIPPED_DARK_OAK_STUMP  = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
+    public static final Block CHIPPED_OAK_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
+    public static final Block CHIPPED_BIRCH_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
+    public static final Block CHIPPED_SPRUCE_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
+    public static final Block CHIPPED_JUNGLE_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
+    public static final Block CHIPPED_ACACIA_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
+    public static final Block CHIPPED_DARK_OAK_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
 
-    //TODO Make custom gravity effected slabs
     public static final Block DIRT_SLAB = new GavitieSlabBlock(FabricBlockSettings.copyOf(Blocks.DIRT.getSettings()), ModItems.PILE_OF_DIRT);
     public static final Block GRAVEL_SLAB = new GavitieSlabBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL.getSettings()), ModItems.PILE_OF_GRAVEL);
     public static final Block SAND_SLAB = new GavitieSlabBlock(FabricBlockSettings.copyOf(Blocks.SAND.getSettings()), ModItems.PILE_OF_SAND);
@@ -55,15 +54,14 @@ public class ModBlocks {
 
 
     private static void registerChippedTreeTrunks() {
-        NewBlock(CHIPPED_OAK_STUMP, "chipped_oak_stump");
-        NewBlock(CHIPPED_BIRCH_STUMP, "chipped_birch_stump");
-        NewBlock(CHIPPED_SPRUCE_STUMP, "chipped_spruce_stump");
-        NewBlock(CHIPPED_JUNGLE_STUMP, "chipped_jungle_stump");
-        NewBlock(CHIPPED_ACACIA_STUMP, "chipped_acacia_stump");
-        NewBlock(CHIPPED_DARK_OAK_STUMP, "chipped_dark_oak_stump");
+        NewBlock(CHIPPED_OAK_LOG, "chipped_oak_log");
+        NewBlock(CHIPPED_BIRCH_LOG, "chipped_birch_log");
+        NewBlock(CHIPPED_SPRUCE_LOG, "chipped_spruce_log");
+        NewBlock(CHIPPED_JUNGLE_LOG, "chipped_jungle_log");
+        NewBlock(CHIPPED_ACACIA_LOG, "chipped_acacia_log");
+        NewBlock(CHIPPED_DARK_OAK_LOG, "chipped_dark_oak_log");
     }
     public static void registerModBlocks(String MOD_ID) {
-        Registries.BLOCK.get(new Identifier("stone")).getSettings().requiresTool();
         ModBlockEntityTypes.registerModBlockEntities(MOD_ID);
         registerSlabs();
         registerTreeStumps();

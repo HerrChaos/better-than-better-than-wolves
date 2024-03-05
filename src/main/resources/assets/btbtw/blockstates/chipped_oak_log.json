@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "chip=1" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_1"
+    },
+    "chip=2" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_2_all"
+    },
+    "chip=3" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_3_all"
+    }
+  }
+}

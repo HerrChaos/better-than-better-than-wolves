@@ -37,8 +37,6 @@ public class ModItems {
     public static final Item PILE_OF_GRAVEL = new Item(new FabricItemSettings());
     public static final Item PILE_OF_SAND = new Item(new FabricItemSettings());
 
-    //TODO Game crashes cus some translation key stuff with block items and thees are the only ones i have
-
     public static final Item DIRT_SLAB = new BlockItem(ModBlocks.DIRT_SLAB, new FabricItemSettings());
     public static final Item GRAVEL_SLAB = new BlockItem(ModBlocks.GRAVEL_SLAB, new FabricItemSettings());
     public static final Item SAND_SLAB = new BlockItem(ModBlocks.SAND_SLAB, new FabricItemSettings());

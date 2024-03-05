@@ -23,12 +23,12 @@ public class TreeTrunkMixin {
     public void onBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, BlockEntity blockEntity, ItemStack tool, CallbackInfo ci) {
         if (!(tool.getItem() instanceof AxeItem)) {
             CompareList LogBlocks = new CompareList();
-            LogBlocks.add("block.minecraft.oak_log", ModBlocks.CHIPPED_OAK_STUMP, null);
-            LogBlocks.add("block.minecraft.birch_log", ModBlocks.CHIPPED_BIRCH_STUMP, null);
-            LogBlocks.add("block.minecraft.jungle_log", ModBlocks.CHIPPED_JUNGLE_STUMP, null);
-            LogBlocks.add("block.minecraft.spruce_log", ModBlocks.CHIPPED_SPRUCE_STUMP, null);
-            LogBlocks.add("block.minecraft.acacia_log", ModBlocks.CHIPPED_ACACIA_STUMP, null);
-            LogBlocks.add("block.minecraft.dark_oak_log", ModBlocks.CHIPPED_DARK_OAK_STUMP, null);
+            LogBlocks.add("block.minecraft.oak_log", ModBlocks.CHIPPED_OAK_LOG, null);
+            LogBlocks.add("block.minecraft.birch_log", ModBlocks.CHIPPED_BIRCH_LOG, null);
+            LogBlocks.add("block.minecraft.jungle_log", ModBlocks.CHIPPED_JUNGLE_LOG, null);
+            LogBlocks.add("block.minecraft.spruce_log", ModBlocks.CHIPPED_SPRUCE_LOG, null);
+            LogBlocks.add("block.minecraft.acacia_log", ModBlocks.CHIPPED_ACACIA_LOG, null);
+            LogBlocks.add("block.minecraft.dark_oak_log", ModBlocks.CHIPPED_DARK_OAK_LOG, null);
             if (LogBlocks.checkFor(state.getBlock().getTranslationKey()) != null) {
                 world.playSound(null, pos, SoundEvents.BLOCK_WOOD_BREAK, SoundCategory.BLOCKS, 0.7f, 0.9f + world.random.nextFloat() * 0.2f);
                 world.setBlockState(pos, ((Block) LogBlocks.checkFor(state.getBlock().getTranslationKey())).getDefaultState());
