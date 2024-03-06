@@ -10,8 +10,10 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 import static chaos.btbtw.BetterThanBetterThanWolves.MOD_ID;
@@ -24,12 +26,12 @@ public class ModBlocks {
     public static final Block TREE_STUMP_ACACIA  = new TreeStump(AbstractBlock.Settings.create().burnable().dropsNothing().strength(5F, 200.0F));
     public static final Block TREE_STUMP_DARK_OAK  = new TreeStump(AbstractBlock.Settings.create().burnable().dropsNothing().strength(5F, 200.0F));
 
-    public static final Block CHIPPED_OAK_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
-    public static final Block CHIPPED_BIRCH_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
-    public static final Block CHIPPED_SPRUCE_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
-    public static final Block CHIPPED_JUNGLE_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
-    public static final Block CHIPPED_ACACIA_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
-    public static final Block CHIPPED_DARK_OAK_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()));
+    public static final Block CHIPPED_OAK_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()), Items.STONE_AXE, SoundEvents.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR);
+    public static final Block CHIPPED_BIRCH_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()), null, SoundEvents.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR);
+    public static final Block CHIPPED_SPRUCE_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()), null, SoundEvents.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR);
+    public static final Block CHIPPED_JUNGLE_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()), null, SoundEvents.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR);
+    public static final Block CHIPPED_ACACIA_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()), null, SoundEvents.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR);
+    public static final Block CHIPPED_DARK_OAK_LOG = new ChippedTreeTrunkBlock(FabricBlockSettings.create().strength(Blocks.OAK_LOG.getHardness(), Blocks.OAK_LOG.getBlastResistance()), null, SoundEvents.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR);
 
     public static final Block DIRT_SLAB = new GavitieSlabBlock(FabricBlockSettings.copyOf(Blocks.DIRT.getSettings()), ModItems.PILE_OF_DIRT);
     public static final Block GRAVEL_SLAB = new GavitieSlabBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL.getSettings()), ModItems.PILE_OF_GRAVEL);

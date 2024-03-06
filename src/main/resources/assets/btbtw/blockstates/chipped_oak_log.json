@@ -3,11 +3,49 @@
     "chip=1" : {
       "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_1"
     },
-    "chip=2" : {
+
+
+    "chip=2,up=true,bottom=false" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_2_top"
+    },
+    "chip=3,up=true,bottom=false" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_3_top"
+    },
+    "chip=4,up=true,bottom=false" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_4_top"
+    },
+
+
+    "chip=2,bottom=true,up=false" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_2_bottom"
+    },
+    "chip=3,bottom=true,up=false" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_3_bottom"
+    },
+    "chip=4,bottom=true,up=false" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_4_bottom"
+    },
+
+
+    "chip=2,bottom=true,up=true" : {
       "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_2_all"
     },
-    "chip=3" : {
+    "chip=3,bottom=true,up=true" : {
       "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_3_all"
+    },
+    "chip=4,bottom=true,up=true" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_4_all"
+    },
+
+
+    "chip=2,up=false,bottom=false" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_2_all"
+    },
+    "chip=3,up=false,bottom=false" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_3_all"
+    },
+    "chip=4,up=false,bottom=false" : {
+      "model": "btbtw:block/chipped/wood/oak/chipped_log_oak_4_all"
     }
   }
 }

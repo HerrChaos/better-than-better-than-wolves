@@ -18,5 +18,6 @@ public class BetterThanBetterThanWolves implements ModInitializer {
 		EventHandler.InitAll();
 		LOGGER.info("Hello Fabric world!");
 		//TODO Make stone block actually drop the loose stone with sharp stick
+		//TODO Make logs drop bark with no axe and with the log.
 	}
 }

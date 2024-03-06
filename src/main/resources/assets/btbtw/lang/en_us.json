@@ -1,9 +1,15 @@
 {
   "item.btbtw.iron_chisel": "Iron Chisel",
-  "item.btbtw.bark_oak": "Oak Bark",
   "item.btbtw.pointy_stick": "Pointy Stick",
   "item.btbtw.loose_stone": "Loose Stone",
   "item.btbtw.sawdust": "Sawdust",
+
+  "item.btbtw.bark_oak": "Oak Bark",
+  "item.btbtw.bark_dark_oak": "Dark Oak Bark",
+  "item.btbtw.bark_spruce": "Spruce Bark",
+  "item.btbtw.bark_birch": "Birch Bark",
+  "item.btbtw.bark_jungle": "Jungle Bark",
+  "item.btbtw.bark_acacia": "Acacia Bark",
 
   "item.btbtw.pile_of_dirt": "Pile of Dirt",
   "item.btbtw.pile_of_gravel": "Pile of Gravel",
